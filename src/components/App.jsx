@@ -1,23 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from '../Navigate';
-import Form from '../Form';
-import Table from '../Table';
+import Navbar from './Navbar';
+import Form from './Form';
+import Table from './Table';
+import Edit from './Edit';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className='app'>
         <Navbar />
-        <main>
+        <main className='main'>
           <Routes>
             <Route
               path='/'
-              element={Form}
+              element={<Form />}
             />
             <Route
               path='/table'
-              element={Table}
+              element={<Table />}
+            />
+            <Route
+              path='/edit'
+              element={<Edit />}
             />
           </Routes>
         </main>
