@@ -1,0 +1,52 @@
+{
+  "requests": [
+    {
+      "name": "Иван Ложкин",
+      "phone": "84953557821",
+      "email": "lozhkin@mail.ru",
+      "product": "course-html"
+    },
+    {
+      "name": "Александр Щукин",
+      "phone": "89163222332",
+      "email": "schukin@yandex.ru",
+      "product": "course-php"
+    },
+    {
+      "name": "Максим Соколов",
+      "phone": "84995896375",
+      "email": "sokolov@rambler.ru",
+      "product": "course-js"
+    },
+    {
+      "name": "Петр Сидоров",
+      "phone": "84957896521",
+      "email": "psidorov@google.com",
+      "product": "course-vue"
+    },
+    {
+      "name": "Василий Скороходов",
+      "phone": "84999587136",
+      "email": "vskor@yahoo.com",
+      "product": "course-wordpress"
+    },
+    {
+      "name": "Петр Симонов",
+      "phone": "84957895412",
+      "email": "simonov@gmail.com",
+      "product": "course-js"
+    },
+    {
+      "name": "Кирилл Птицын",
+      "phone": "89165897415",
+      "email": "kp@ya.ru",
+      "product": "course-html"
+    },
+    {
+      "name": "Степан Васечкин",
+      "phone": "84995687921",
+      "email": "sv@google.com",
+      "product": "course-php"
+    }
+  ]
+}

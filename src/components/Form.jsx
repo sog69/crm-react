@@ -10,30 +10,10 @@ class TestData {
 }
 const testData = [
   new TestData('Иван Ложкин', '84953557821', 'lozhkin@mail.ru', 'course-html'),
-  new TestData(
-    'Александр Щукин',
-    '89163222332',
-    'schukin@yandex.ru',
-    'course-php'
-  ),
-  new TestData(
-    'Максим Соколов',
-    '84995896375',
-    'sokolov@rambler.ru',
-    'course-js'
-  ),
-  new TestData(
-    'Петр Сидоров',
-    '84957896521',
-    'psidorov@google.com',
-    'course-vue'
-  ),
-  new TestData(
-    'Василий Скороходов',
-    '84999587136',
-    'vskor@yahoo.com',
-    'course-wordpress'
-  ),
+  new TestData('Александр Щукин', '89163222332', 'schukin@yandex.ru', 'course-php'),
+  new TestData('Максим Соколов', '84995896375', 'sokolov@rambler.ru', 'course-js'),
+  new TestData('Петр Сидоров', '84957896521', 'psidorov@google.com', 'course-vue'),
+  new TestData('Василий Скороходов', '84999587136', 'vskor@yahoo.com', 'course-wordpress'),
   new TestData('Петр Симонов', '84957895412', 'simonov@gmail.com', 'course-js'),
   new TestData('Кирилл Птицын', '89165897415', 'kp@ya.ru', 'course-html'),
   new TestData('Степан Васечкин', '84995687921', 'sv@google.com', 'course-php'),
@@ -47,23 +27,11 @@ function getRandomData(obj) {
 
 // -----------------------------------------------------------
 function Form() {
-  // начальное заполнение формы
-  // const init = getRandomData(testData);
-  // состояние полей формы
-  // const [request, setRequest] = useState(() => {
-  //   return {
-  //     name: init.name,
-  //     phone: init.phone,
-  //     email: init.email,
-  //     product: init.product,
-  //   };
-  // });
+  // начальное заполнение формы и ее состояние
   const [request, setRequest] = useState(() => {
     return getRandomData(testData);
   });
-
-  console.log('🚀 ~ request', request);
-
+  // изменение полей формы
   const changeName = (e) => {
     setRequest((prev) => {
       return {
@@ -100,9 +68,10 @@ function Form() {
   // отправка формы
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const request = getRandomData(testData);
-    setRequest(request);
-    // fillTestData();
+
+    // смена данных формы после отправки
+    setRequest(getRandomData(testData));
+
     // сохранение данных формы
   };
 
