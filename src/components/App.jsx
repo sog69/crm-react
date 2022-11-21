@@ -20,10 +20,10 @@ function App() {
               path='/table'
               element={<Table />}
             />
-            <Route
+            {/* <Route
               path='/edit'
               element={<Edit />}
-            />
+            /> */}
           </Routes>
         </main>
       </div>

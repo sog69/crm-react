@@ -31,6 +31,7 @@ function Form() {
   const [request, setRequest] = useState(() => {
     return getRandomData(testData);
   });
+
   // изменение полей формы
   const changeName = (e) => {
     setRequest((prev) => {
