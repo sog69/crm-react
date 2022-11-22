@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 // тестовые данные для формы
 class TestData {
   constructor(name, phone, email, product) {
@@ -29,6 +30,7 @@ function getRandomData(obj) {
 function Form() {
   // начальное заполнение формы и ее состояние
   const [request, setRequest] = useState(() => {
+    console.log('useState');
     return getRandomData(testData);
   });
 
@@ -71,6 +73,7 @@ function Form() {
     evt.preventDefault();
 
     // смена данных формы после отправки
+    console.log('Submit');
     setRequest(getRandomData(testData));
 
     // сохранение данных формы
