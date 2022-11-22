@@ -28,6 +28,9 @@ function getRandomData(obj) {
 
 // -----------------------------------------------------------
 function Form() {
+  document.body.classList.remove('body--dashboard');
+  document.body.classList.add('radial-bg', 'flex-center');
+
   // начальное заполнение формы и ее состояние
   const [request, setRequest] = useState(() => {
     console.log('useState');
@@ -89,12 +92,7 @@ function Form() {
           </p>
         </div>
         <div className='white-plate__line-between white-plate__line-between--main'></div>
-        <form
-          onSubmit={handleSubmit}
-          id='form'
-          method='POST'
-          action=''
-        >
+        <form onSubmit={handleSubmit} id='form' method='POST' action=''>
           <label>Ваши данные:</label>
           <div className='form-group'>
             <input
@@ -152,10 +150,7 @@ function Form() {
             </select>
           </div>
           <div className='form-group'>
-            <button
-              type='submit'
-              className='btn btn-lg btn-primary btn-block'
-            >
+            <button type='submit' className='btn btn-lg btn-primary btn-block'>
               Оформить заявку
             </button>
           </div>

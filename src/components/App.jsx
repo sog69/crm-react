@@ -8,24 +8,13 @@ import Edit from './Edit';
 function App() {
   return (
     <Router>
-      <div className='app'>
+      <div>
         <Navbar />
-        <main className='main'>
-          <Routes>
-            <Route
-              path='/'
-              element={<Form />}
-            />
-            <Route
-              path='/table'
-              element={<Table />}
-            />
-            {/* <Route
-              path='/edit'
-              element={<Edit />}
-            /> */}
-          </Routes>
-        </main>
+        <Routes>
+          <Route path='/' element={<Form />} />
+          <Route path='/table' element={<Table />} />
+          <Route path='/edit' element={<Edit />} />
+        </Routes>
       </div>
     </Router>
   );
