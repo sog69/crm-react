@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Component } from 'react';
 
 // тестовые данные для формы
 class TestData {
@@ -24,6 +24,12 @@ const testData = [
 function getRandomData(obj) {
   const index = Math.floor(Math.random() * obj.length);
   return obj[index];
+}
+
+class FormClass extends Component {
+  render() {
+    return <div></div>;
+  }
 }
 
 // -----------------------------------------------------------
