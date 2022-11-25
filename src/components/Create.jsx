@@ -33,9 +33,10 @@ class FormClass extends Component {
 }
 
 // -----------------------------------------------------------
-function Form() {
+function Create() {
   document.body.classList.remove('body--dashboard');
   document.body.classList.add('radial-bg', 'flex-center');
+
 
   // начальное заполнение формы и ее состояние
   const [request, setRequest] = useState(() => {
@@ -169,4 +170,4 @@ function Form() {
   return <div>{formMarkup}</div>;
 }
 
-export default Form;
+export default Create;

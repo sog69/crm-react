@@ -1,4 +1,6 @@
-function Table() {
+import { Link } from 'react-router-dom';
+
+const Requests = ({ requests }) => {
   document.body.classList.remove('radial-bg', 'flex-center');
   document.body.classList.add('body--dashboard');
 
@@ -99,34 +101,24 @@ function Table() {
               </tr>
             </thead>
             <tbody id='tbody'>
-              <tr>
-                <th scope='row'>1</th>
-                <td>01.04.2020</td>
-                <td>Курс по верстке</td>
-                <td>Петр Сергеевич</td>
-                <td>info@inbox.ru</td>
-                <td>+7 (909) 77-55-777</td>
-                <td>
-                  <div className='badge badge-pill badge-danger'>Новый</div>
-                </td>
-                <td>
-                  <a href='/'>Редактировать</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope='row'>1</th>
-                <td>01.04.2020</td>
-                <td>Курс по верстке</td>
-                <td>Петр Сергеевич</td>
-                <td>info@inbox.ru</td>
-                <td>+7 (909) 77-55-777</td>
-                <td>
-                  <div className='badge badge-pill badge-danger'>Новый</div>
-                </td>
-                <td>
-                  <a href='/'>Редактировать</a>
-                </td>
-              </tr>
+              {requests.map((request) => {
+                console.log(request);
+                <tr key={request.id}>
+                  <th scope='row'>{request.id + 1}</th>
+                  <td>01.04.2020</td>
+                  <td>Курс по верстке</td>
+                  <td>{request.name}</td>
+                  <td>{request.email}</td>
+                  <td>{request.phone}</td>
+                  <td>
+                    <div className='badge badge-pill badge-danger'>Новый</div>
+                  </td>
+                  <td>
+                    {/* <a href='/'>Редактировать</a> */}
+                    <Link to='/edit'>Редактировать</Link>
+                  </td>
+                </tr>;
+              })}
             </tbody>
           </table>
         </div>
@@ -135,6 +127,6 @@ function Table() {
   );
 
   return <div>{markup}</div>;
-}
+};
 
-export default Table;
+export default Requests;
